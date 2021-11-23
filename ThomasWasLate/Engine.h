@@ -16,13 +16,17 @@ private:
 
 	sf::RenderWindow m_Window;
 
+	View m_MainView;
+	View m_LeftView;
+	View m_RightView;
+
 	sf::View m_BGMainView;
 	sf::View m_BGLeftView;
 	sf::View m_BGRightView;
 	sf::View m_HUDView;
 
 	sf::Sprite m_BackgroundSprite;
-	sf::Texture m_BackgorundTexture;
+	sf::Texture m_BackgroundTexture;
 
 	bool m_IsPlaying = false;
 
