@@ -3,6 +3,8 @@
 #include <SFML/Graphics.hpp>
 #include "TextureHolder.h"
 
+using namespace sf;
+
 class Engine
 {
 private:
@@ -15,11 +17,11 @@ private:
 	const int GRAVITY = 300;
 
 	sf::RenderWindow m_Window;
-
+	// the main views 
 	View m_MainView;
 	View m_LeftView;
 	View m_RightView;
-
+	// backgorund views
 	sf::View m_BGMainView;
 	sf::View m_BGLeftView;
 	sf::View m_BGRightView;
