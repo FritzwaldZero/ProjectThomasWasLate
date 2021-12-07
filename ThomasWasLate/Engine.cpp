@@ -26,6 +26,10 @@ Engine::Engine()
 	m_BackgroundTexture = TextureHolder::GetTexture("assets/graphics/background.png");
 
 	m_BackgroundSprite.setTexture(m_BackgroundTexture);
+
+	// load in the textures for the background vertex 
+	m_TextureFiles = TextureHolder::GetTexture("assets/graphics/tiles_sheet.png");
+
 }
 
 void Engine::run()

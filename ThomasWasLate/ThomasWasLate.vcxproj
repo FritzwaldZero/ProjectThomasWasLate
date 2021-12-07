@@ -19,16 +19,25 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Bob.cpp" />
+    <ClCompile Include="Character.cpp" />
     <ClCompile Include="draw.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="input.cpp" />
+    <ClCompile Include="LevelManager.cpp" />
+    <ClCompile Include="loadLevel.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="TextureHolder.cpp" />
+    <ClCompile Include="Thomas.cpp" />
     <ClCompile Include="update.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Bob.h" />
+    <ClInclude Include="Character.h" />
     <ClInclude Include="Engine.h" />
+    <ClInclude Include="LevelManager.h" />
     <ClInclude Include="TextureHolder.h" />
+    <ClInclude Include="Thomas.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

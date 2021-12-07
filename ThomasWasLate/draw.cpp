@@ -12,6 +12,10 @@ void Engine::draw()
 		m_Window.draw(m_BackgroundSprite);
 		//switch to main view
 		m_Window.setView(m_MainView);
+		m_Window.draw(m_VALevel, &m_TextureFiles);
+		//draw thomas and bob
+		m_Window.draw(m_Thomas.getSprite());
+		m_Window.draw(m_Bob.getSprite());
 	}
 	else
 	{
@@ -23,12 +27,24 @@ void Engine::draw()
 		//switch to main view
 		m_Window.setView(m_LeftView);
 
+		m_Window.draw(m_VALevel, &m_TextureFiles);
+
+		
+		m_Window.draw(m_Bob.getSprite());		
+		m_Window.draw(m_Thomas.getSprite());
+
 		//draw bobs view
 		m_Window.setView(m_BGRightView);
 		//draw the background
 		m_Window.draw(m_BackgroundSprite);
 		//switch to main view
 		m_Window.setView(m_RightView);
+
+		m_Window.draw(m_VALevel, &m_TextureFiles);
+
+		
+		m_Window.draw(m_Thomas.getSprite());
+		m_Window.draw(m_Bob.getSprite());
 	}
 	// draw the HUD, switch to HUD view
 	m_Window.setView(m_HUDView);

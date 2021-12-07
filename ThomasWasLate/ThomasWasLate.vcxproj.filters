@@ -13,25 +13,49 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Engine Files">
+      <UniqueIdentifier>{6dc4070e-8ac6-4fc1-a502-0aa3286d588d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Player Files">
+      <UniqueIdentifier>{7b3684cf-a1f9-4b3f-b2bc-5e8d7953a437}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Manager Files">
+      <UniqueIdentifier>{e109a5a4-4ffa-4ca8-95de-5df86bc8dac9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="draw.cpp">
+      <Filter>Source Files\Engine Files</Filter>
+    </ClCompile>
     <ClCompile Include="Engine.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Engine Files</Filter>
     </ClCompile>
     <ClCompile Include="input.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Engine Files</Filter>
     </ClCompile>
     <ClCompile Include="update.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Engine Files</Filter>
     </ClCompile>
-    <ClCompile Include="draw.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Bob.cpp">
+      <Filter>Source Files\Player Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Thomas.cpp">
+      <Filter>Source Files\Player Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>Source Files\Player Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelManager.cpp">
+      <Filter>Source Files\Manager Files</Filter>
     </ClCompile>
     <ClCompile Include="TextureHolder.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Manager Files</Filter>
+    </ClCompile>
+    <ClCompile Include="loadLevel.cpp">
+      <Filter>Source Files\Engine Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -39,6 +63,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TextureHolder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Thomas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Bob.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
