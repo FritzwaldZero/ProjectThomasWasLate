@@ -3,6 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include "TextureHolder.h"
 #include "LevelManager.h"
+#include "Character.h"
 #include "Bob.h"
 #include "Thomas.h"
 
@@ -65,6 +66,7 @@ private:
 	void update(float dtAsSeconds);
 	void draw();
 	void loadLevel();
+	bool detectCollisions(PlayableCharacter& character);
 
 public:
 	Engine();

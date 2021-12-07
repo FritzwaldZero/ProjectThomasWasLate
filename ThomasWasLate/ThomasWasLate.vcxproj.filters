@@ -57,6 +57,9 @@
     <ClCompile Include="loadLevel.cpp">
       <Filter>Source Files\Engine Files</Filter>
     </ClCompile>
+    <ClCompile Include="detectCollisions.cpp">
+      <Filter>Source Files\Engine Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine.h">
