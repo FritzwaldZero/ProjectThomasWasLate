@@ -1,5 +1,7 @@
 #include "Engine.h"
 #include <sstream>
+#include "Hud.h"
+#include <iostream>
 
 void Engine::update(float dtAsSeconds)
 {
@@ -63,6 +65,22 @@ void Engine::update(float dtAsSeconds)
 		{
 			m_MainView.setCenter(m_Bob.getCenter());
 		}
+	}
+
+	m_FramesSinceLastHUDUpdate++;
+
+	if (m_FramesSinceLastHUDUpdate > m_TargetFramesPerHUDUpdate)
+	{
+		stringstream ssTime;
+		stringstream ssLevel;
+
+		ssTime << (int)m_TimeRemaining;
+		m_Hud.setTime(ssTime.str());
+
+		ssLevel << "Level:" << m_LM.getCurrentLevel();
+		m_Hud.setLevel(ssLevel.str());
+
+		m_FramesSinceLastHUDUpdate = 0;
 	}
 
 	vector<Vector2f>::iterator it;

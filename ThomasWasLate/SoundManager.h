@@ -1,5 +1,5 @@
-#ifndef SOUNDMANAGER.H
-#define SOUNDMANAGER.H
+#ifndef SOUNDMANAGER_H
+#define SOUNDMANAGER_H
 #include <SFML/Audio.hpp>
 
 using namespace sf;

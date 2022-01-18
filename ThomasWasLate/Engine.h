@@ -7,6 +7,7 @@
 #include "Character.h"
 #include "Bob.h"
 #include "Thomas.h"
+#include "Hud.h" 
 
 using namespace sf;
 
@@ -24,6 +25,11 @@ private:
 
 	//class reference tp manage sound 
 	SoundManager m_SM;
+
+	//a class reference to the hud 
+	Hud m_Hud;
+	int m_FramesSinceLastHUDUpdate = 0;
+	int m_TargetFramesPerHUDUpdate = 500;
 
 	const int TILE_SIZE = 50;
 	const int VERT_IN_QUAD = 4;
