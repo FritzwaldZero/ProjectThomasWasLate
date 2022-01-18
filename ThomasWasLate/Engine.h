@@ -3,6 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include "TextureHolder.h"
 #include "LevelManager.h"
+#include "SoundManager.h"
 #include "Character.h"
 #include "Bob.h"
 #include "Thomas.h"
@@ -20,6 +21,9 @@ private:
 
 	// a class reference to manage all the levels 
 	LevelManager m_LM;
+
+	//class reference tp manage sound 
+	SoundManager m_SM;
 
 	const int TILE_SIZE = 50;
 	const int VERT_IN_QUAD = 4;
@@ -61,12 +65,16 @@ private:
 	// texture for the level tiles 
 	Texture m_TextureFiles;
 
-	
+	vector <Vector2f> m_FireEmitters;
+
 	void input();
 	void update(float dtAsSeconds);
 	void draw();
 	void loadLevel();
+	void populateEmitters(vector<Vector2f>& vSoundEmitters, int** arrayLevel);
 	bool detectCollisions(PlayableCharacter& character);
+
+
 
 public:
 	Engine();
