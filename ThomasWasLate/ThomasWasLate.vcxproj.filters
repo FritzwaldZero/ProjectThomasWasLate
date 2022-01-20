@@ -22,6 +22,9 @@
     <Filter Include="Source Files\Manager Files">
       <UniqueIdentifier>{e109a5a4-4ffa-4ca8-95de-5df86bc8dac9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\SFX">
+      <UniqueIdentifier>{26d674b4-c3e3-4872-a03a-7d9edf81863f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -66,6 +69,12 @@
     <ClCompile Include="Hud.cpp">
       <Filter>Source Files\Manager Files</Filter>
     </ClCompile>
+    <ClCompile Include="Particle.cpp">
+      <Filter>Resource Files\SFX</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleSystem.cpp">
+      <Filter>Resource Files\SFX</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine.h">
@@ -90,6 +99,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Hud.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Particle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
