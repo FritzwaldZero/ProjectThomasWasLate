@@ -81,10 +81,24 @@ bool Engine::detectCollisions(PlayableCharacter& character)
 				}
 			}
 
+			//have the characters feet touched the elements ?
+			//if true start the particle effects 
+			if (!m_PS.running())
+			{
+				if (m_ArrayLevel[y][x] == 2 || m_ArrayLevel[y][x] == 3)
+				{
+					if (character.getFeet().intersects(block))
+					{
+						m_PS.emitParticles(character.getCenter());
+					}
+				}
+			}
+
 			if (m_ArrayLevel[y][x] == 4)
 			{
 				//character reached the goal, particles, audio
 				reachedGoal = true;
+				m_NewLevelRequired = true;
 
 			}
 		}

@@ -8,6 +8,7 @@
 #include "Bob.h"
 #include "Thomas.h"
 #include "Hud.h" 
+#include "ParticleSystem.h"
 
 using namespace sf;
 
@@ -16,6 +17,11 @@ class Engine
 private:
 	//texture holder 
 	TextureHolder th;
+
+	//create a particle system
+	ParticleSystem m_PS;
+
+
 	//Thomas and Bob
 	Thomas m_Thomas;
 	Bob m_Bob;
@@ -50,6 +56,9 @@ private:
 
 	sf::Sprite m_BackgroundSprite;
 	sf::Texture m_BackgroundTexture;
+
+	// declare a shader for the background
+	Shader m_RippleShader;
 
 	bool m_IsPlaying = false;
 

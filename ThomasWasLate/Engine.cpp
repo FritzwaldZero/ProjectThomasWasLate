@@ -23,12 +23,25 @@ Engine::Engine()
 	m_BGLeftView.setViewport(sf::FloatRect(0.001f, 0.001f, 0.498f, 0.998f));
 	m_BGRightView.setViewport(sf::FloatRect(0.5f, 0.001f, 0.499f, 0.998f));
 
+	//shader background
+	if (!Shader::isAvailable())
+	{
+		m_Window.close();
+	}
+	else
+	{
+		m_RippleShader.loadFromFile("assets/shaders/vertShader.vert", "assets/shaders/ripplerShader.frag");
+	}
+
 	m_BackgroundTexture = TextureHolder::GetTexture("assets/graphics/background.png");
 
 	m_BackgroundSprite.setTexture(m_BackgroundTexture);
 
 	// load in the textures for the background vertex 
 	m_TextureFiles = TextureHolder::GetTexture("assets/graphics/tiles_sheet.png");
+
+	// initialize the particle system
+	m_PS.init(1000);
 
 }
 

@@ -83,6 +83,12 @@ void Engine::update(float dtAsSeconds)
 		m_FramesSinceLastHUDUpdate = 0;
 	}
 
+	//update the particles
+	if (m_PS.running())
+	{
+		m_PS.update(dtAsSeconds);
+	}
+
 	vector<Vector2f>::iterator it;
 
 	for (it = m_FireEmitters.begin(); it != m_FireEmitters.end(); it++)

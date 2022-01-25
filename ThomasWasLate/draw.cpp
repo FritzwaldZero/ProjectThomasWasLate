@@ -4,6 +4,9 @@ void Engine::draw()
 {
 	// rub ou thte last frame
 	m_Window.clear(sf::Color::White);
+
+	m_RippleShader.setUniform("uTime", m_GameTimeTotal.asSeconds());
+
 	if (!m_IsSplitScreen)
 	{
 		//switch to new background view
@@ -16,6 +19,12 @@ void Engine::draw()
 		//draw thomas and bob
 		m_Window.draw(m_Thomas.getSprite());
 		m_Window.draw(m_Bob.getSprite());
+
+		//draw particles if the PS is running
+		if (m_PS.running())
+		{
+			m_Window.draw(m_PS);
+		}
 	}
 	else
 	{
@@ -45,6 +54,11 @@ void Engine::draw()
 		
 		m_Window.draw(m_Thomas.getSprite());
 		m_Window.draw(m_Bob.getSprite());
+
+		if (m_PS.running())
+		{
+			m_Window.draw(m_PS);
+		}
 	}
 	// draw the HUD, switch to HUD view
 	m_Window.setView(m_HUDView);
